@@ -22,10 +22,8 @@ import java.util.function.Supplier;
 public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FirstModMain.MODID);
 
-    private static BlockBehaviour CactusBlock;
     public static final RegistryObject<Block> ANDREW_BLOCK = BLOCKS.register("andrew_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.CACTUS).strength(4f, 500f).requiresCorrectToolForDrops().lightLevel((state) -> 13)));
-            //() -> new Block(BlockBehaviour.Properties.copy(CactusBlock)));
 
     public static final RegistryObject<Block> BOOM_BLOCK = BLOCKS.register("boom_block",
             () -> new BoomBlock(Block.Properties.copy(Blocks.DIRT)));
